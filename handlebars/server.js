@@ -2,14 +2,19 @@ const handlebars = require("express-handlebars");
 const express = require('express');
 const Productos = require('./api/productos.js');
 
+const port = 8080
 
 let productos = new Productos();
 
 const app = express();
 
+app.listen(port, () => {
+    console.log(`Handlebars app escuchando en puerto ${port}`)
+})
+
 app.engine(
     "hbs",
-    handlebars({
+    handlebars.engine({
         extname: ".hbs",
         defaultLayout: "index.hbs"
     })
@@ -63,4 +68,3 @@ router.get("/productos/vista", (req, res) => {
     });
 })
 
-const PORT = 8080;

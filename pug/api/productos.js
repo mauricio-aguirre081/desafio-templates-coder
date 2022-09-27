@@ -15,9 +15,8 @@ class Productos {
         }
 
         guardar(prod) {
-            prod.id = Number(id);
-            let index = this.productos.findIndex((prod) => prod.id == id);
-            this.productos.splice(index, 1, prod);
+            prod.id = ++this.id;
+            this.productos.push(prod);
         }
 
         actualizar(prod, id) {

@@ -9,16 +9,16 @@
 
 </head>
     <body>
-        <di class="jumbotron">
+        <div class="jumbotron">
             <h1>Vista de Productos</h1>
                 <% if(hayProductos) { %>
                     <div class="table-responsive">
                         <table class="table table-dark">
-                            <tr style="color: rgb(38, 0, 255);"> <th>Nombre</th> <th>Precio</th> <th>Foto</th> </tr>
+                            <tr style="color: rgb(255, 255, 0);"> <th>Nombre</th> <th>Precio</th> <th>Foto</th> </tr>
                         <% for (const producto in productos ) { %>
                             <tr>
-                                <td> <%= producto[producto].title %> </td>
-                                <td> <%= productos[producto].price %> </td>
+                                <td style="color: rgb(254, 254, 245);"> <%= productos[producto].title %> </td>
+                                <td style="color: rgb(254, 254, 245);"> <%= productos[producto].price %> </td>
                                 <td> 
                                     <img src="<%= productos[producto].thumbnail %>" alt="not found" width="50">
                                 </td>
@@ -31,8 +31,8 @@
                 <% }%>
         </div>
         <div class="mt-2">
-            <a href="localhost:8080/index.html"><button class="btn btn-danger">Ir a Formulario</button></a> 
-            <a href="localhost:8080/productos/vista"><button class="btn btn-info">Ir a Lista</button></a>
-         </div>
+            <a href="/" class="btn btn-danger" role="button">Ir al Formulario</a>
+            <a href="/api/productos/vista" class="btn btn-info" role="button">Ir a la Lista</a>
+        </div>
 
     </body>

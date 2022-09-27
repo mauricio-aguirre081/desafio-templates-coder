@@ -2,10 +2,15 @@ const pug = require('pug')
 const express = require('express');
 const Productos = require('./api/productos.js');
 
+const port = 8080;
 
 let productos = new Productos();
 
 const app = express();
+
+app.listen(port, () => {
+    console.log(`Pug app escuchando en puerto ${port}`)
+})
 
 app.set("view engine", "pug");
 app.set("views", "./views");
@@ -56,4 +61,3 @@ router.get("/productos/vista", (req, res) => {
     });
 })
 
-const PORT = 8080;

@@ -17,14 +17,14 @@
             </div>
             <br>
 
-            <form action="api/productos/guardar" method="POST" autocomplete="off">
+            <form action="/api/productos/guardar" method="post" autocomplete="off">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input class="form-control" type="text" name="title" id="nombre" required>
                 </div>
                 <div class="form-group">
                     <label for="nombre">Precio</label>
-                    <input class="form-control" type="number" step="0.01" name="title" id="precio" required>
+                    <input class="form-control" type="number" step="0.01" name="price" id="precio" required>
                 </div>
                 <div class="form-group">
                     <label for="foto">Foto URL</label>
@@ -33,9 +33,9 @@
                 <button class="btn btn-success mt-3">Registrar</button>
             </form>
             <div class="mt-2">
-                <a href="localhosrt:8080/index.html"><button class="btn btn-danger">Ir a Formulario</button></a> 
-                <a href="localhost:8080/productos/vista"><button class="btn btn-info">Ir a Lista</button></a>
-             </div>
+                <a href="/" class="btn btn-danger" role="button">Ir al Formulario</a>
+                <a href="/api/productos/vista" class="btn btn-info" role="button">Ir a la Lista</a>
+            </div>
         </div>
     </div>
     

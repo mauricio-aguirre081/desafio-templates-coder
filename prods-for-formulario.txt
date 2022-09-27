@@ -1,0 +1,19 @@
+pelota de futbol
+300
+https://img.icons8.com/office/344/football2--v1.png
+
+guante de boxeo
+400
+https://img.icons8.com/office/344/boxing.png
+
+pelota de rugby
+350
+https://img.icons8.com/office/344/rugby.png
+
+raqueta de tenis
+600
+https://img.icons8.com/office/344/tennis.png
+
+pelota de volleyball
+400
+https://img.icons8.com/office/344/volleyball.png

@@ -1,10 +1,15 @@
 const express = require('express');
 const Productos = require('./api/productos.js');
 
+const port = 8080;
 
 let productos = new Productos();
 
 const app = express();
+
+app.listen(port, () => {
+    console.log(`Ejs app escuchando en puerto ${port}`)
+  })
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
@@ -55,4 +60,3 @@ router.get("/productos/vista", (req, res) => {
     });
 })
 
-const PORT = 8080;
